@@ -2,17 +2,32 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Meine erste HTML-Seite</title>
-  <script>
-    function showHello() {
-      document.getElementById('message').style.display = 'block';
-    }
-  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Komplette Website</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button onclick="showHello()">Klick mich</button>
-  <h1 id="message" style="display:none;">Hallo Welt!</h1>
-  <p>Das ist eine einfache HTML-Seite.</p>
+  <header>
+    <h1>Meine Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Start</a></li>
+        <li><a href="#">Über Uns</a></li>
+        <li><a href="#">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Willkommen</h2>
+      <p>Dies ist eine Beispielseite.</p>
+      <button id="showButton">Zeige Hallo Welt</button>
+      <p id="message" class="hidden">Hallo Welt!</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Meine Website</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
-
