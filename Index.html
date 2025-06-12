@@ -1,12 +1,28 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <title>Meine erste HTML-Seite</title>
-</head>
-<body>
-  <h1>Hallo Welt!</h1>
-  <p>Das ist eine einfache HTML-Seite.</p>
-</body>
-</html>
-
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/Index.html b/Index.html
+index 78fce115c09c0e5fd09e9067c0bab89ac112469a..24a703a5f88f67a045e7e31f2d37b5bc8f71d0c7 100644
+--- a/Index.html
++++ b/Index.html
+@@ -1,12 +1,18 @@
+ <!DOCTYPE html>
+ <html lang="de">
+ <head>
+   <meta charset="UTF-8">
+   <title>Meine erste HTML-Seite</title>
++  <script>
++    function showHello() {
++      document.getElementById('message').style.display = 'block';
++    }
++  </script>
+ </head>
+ <body>
+-  <h1>Hallo Welt!</h1>
++  <button onclick="showHello()">Klick mich</button>
++  <h1 id="message" style="display:none;">Hallo Welt!</h1>
+   <p>Das ist eine einfache HTML-Seite.</p>
+ </body>
+ </html>
+ 
+ 
+EOF
+)
